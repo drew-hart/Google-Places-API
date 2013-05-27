@@ -2,6 +2,7 @@ require 'open-uri'
 require 'json'
 require 'pp'
 
+beginning = Time.now
 latitude =  43.0389
 longitude = -87.9064
 sensor = false
@@ -42,3 +43,4 @@ jdoc.fetch("results").each do |item|
 #  puts "\n"
 #  puts "=" * 80
 end
+puts "Time elapsed #{Time.now - beginning} seconds"
